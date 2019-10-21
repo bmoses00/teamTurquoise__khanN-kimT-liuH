@@ -1,0 +1,7 @@
+henryL -- 2019-10-20 23:59
+Nahi created the component map which correlates to the sitemap directly.
+The component map incorporates the pages and such to lead into the creation of
+the sitemap by Taejoon. In accordance with the component map and site map,
+Henry was able to visualize the database layout diagram. In this, he utilized
+tables to finish up on the layout. We looked at other teams design docs and we
+improved ours by learning from it.
