@@ -1,1 +1,4 @@
-# teamTurquoise__khanN-kimT-liuH
+# Collaborative storytelling game/website by teamTurquoise
+# khanN - Components
+# kimT - Site Map
+# liuH - Database
