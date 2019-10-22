@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% block title %}
+	<title>
+	  Login
+	</title>
+	{% endblock %}
+  </head>
+  <body>
+    {% block content %}
+	<h1> K #16: Do I Know You? </h1>
+	<b> Team Name: </b> Peglegs
+	<br>
+	<b> Team Roster: </b> Biraj Chowdhury and Henry Liu
+	<br>
+	<form>
+	  {% block incaseOfError %}{% endblock}
+	  Username:
+	  <input type="text" name="username">
+	  <br>
+	  Password:
+	  <input type="text" name="password">
+	  <br>
+	  <input type="submit" name="sub1">
+	</form>
+	{% endblock %}
+  </body>
+</html>
