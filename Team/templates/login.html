@@ -2,7 +2,6 @@
 <html>
   <head>
     {% block title %}
-    <center>
 	<title>
 	  Login
 	</title>
@@ -10,8 +9,8 @@
   </head>
   <body>
     {% block content %}
-	<h1>Log In </h1>
-	<br>
+	<h1> Log in </h1>
+
   {% block flashing %}
     {% with messages = get_flashed_messages() %}
     {% if messages %}
@@ -24,7 +23,7 @@
     {% endwith %}
     {% endblock %}
 	<form>
-    <center>
+
 	  Username:
 	  <input type="text" name="username">
 	  <br>
@@ -32,8 +31,13 @@
 	  <input type="text" name="password">
 	  <br>
 	  <input type="submit" name="sub1">
+
+    <a href="https://www.google.com/?client=safari">
+   <button>Signup</button>
+</a>
+
+
 	</form>
-    </center>
 	{% endblock %}
   </body>
 </html>

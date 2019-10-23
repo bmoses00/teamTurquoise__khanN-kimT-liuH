@@ -9,19 +9,26 @@
   </head>
   <body>
     {% block content %}
-	<h1> K #16: Do I Know You? </h1>
-	<b> Team Name: </b> Peglegs
-	<br>
-	<b> Team Roster: </b> Biraj Chowdhury and Henry Liu
-	<br>
+	<h1> Sign up </h1>
+
+  {% block flashing %}
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <div class="messages">
+        {% for message in messages %}
+        <span>{{ message }}</span>
+        {% endfor %}
+    </div>
+    {% endif %}
+    {% endwith %}
+    {% endblock %}
 	<form>
-	  {% block incaseOfError %}{% endblock}
+
 	  Username:
 	  <input type="text" name="username">
 	  <br>
 	  Password:
 	  <input type="text" name="password">
-	  <br>
 	  <input type="submit" name="sub1">
 	</form>
 	{% endblock %}
