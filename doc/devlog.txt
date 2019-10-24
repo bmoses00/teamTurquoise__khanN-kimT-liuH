@@ -5,3 +5,8 @@ the sitemap by Taejoon. In accordance with the component map and site map,
 Henry was able to visualize the database layout diagram. In this, he utilized
 tables to finish up on the layout. We looked at other teams design docs and we
 improved ours by learning from it.
+
+taejoonK -- 2019-10-23 23:54
+I added onto the db builder extra code and substituted the would-be variables with random values. 
+Still figuring out on how to incorporate it with the main flask app.
+
