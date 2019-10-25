@@ -16,23 +16,23 @@ def root():
     #global is a keyword that allows an user to modify a variable outside the current scope
     global reason
     print(url_for("success"))
-    #Check to see if user entered username and password
+    #Check to see if user entered usernamee and password
     if ("username" in request.args) & ("password" in request.args):
-        usernam = request.args["username"]
-        passwor = request.args["password"]
-        if (passwor == "1") & (usernam == "1"):
+        username = request.args["username"]
+        password = request.args["password"]
+        if (password == "1") & (username == "1"):
             return redirect(url_for("signup"))
-        #If password and username are correct, say so
-        if (passwor == "1234") & (usernam == "Peglegs"):
+        #If password and usernamee are correct, say so
+        if (password == "1234") & (username == "Peglegs"):
             return redirect(url_for("success"))
-        #If password and username are incorrect,
-        elif (usernam != "Peglegs") & (passwor != "1234"):
-            reason = " Your username and password were both incorrect"
+        #If password and usernamee are incorrect,
+        elif (username != "Peglegs") & (password != "1234"):
+            reason = " Your usernamee and password were both incorrect"
             flash(reason)
             return redirect(url_for("try_again"))
-        #If username is incorrect, say so
-        elif (usernam != "Peglegs"):
-            reason = " Not valid username"
+        #If usernamee is incorrect, say so
+        elif (username != "Peglegs"):
+            reason = " Not valid usernamee"
             flash(reason)
             return redirect(url_for("try_again"))
         #If password is incorrect, say so
@@ -45,22 +45,22 @@ def root():
         )
 
 
-#If password or username is incorrect
+#If password or usernamee is incorrect
 @app.route("/error")
 def try_again():
     global reason
     if ("username" in request.args) & ("password" in request.args):
-            usernam = request.args["username"]
-            passwor = request.args["password"]
-            #If password and username are correct, say so
-            if (passwor == "1234") & (usernam == "Peglegs"):
+            username = request.args["username"]
+            password = request.args["password"]
+            #If password and usernamee are correct, say so
+            if (password == "1234") & (username == "Peglegs"):
                 return redirect(url_for("success"))
-            #If password and username are incorrect, say so
-            elif (usernam != "Peglegs") & (passwor != "1234"):
+            #If password and usernamee are incorrect, say so
+            elif (username != "Peglegs") & (password != "1234"):
                 reason = " Your username and password were both incorrect"
                 return redirect(url_for("try_again"))
-            #If username is incorrect, say so
-            elif (usernam != "Peglegs"):
+            #If usernamee is incorrect, say so
+            elif (username != "Peglegs"):
                 reason = " Your username was incorrect"
                 return redirect(url_for("try_again"))
             #If password is incorrect, say so
@@ -73,11 +73,12 @@ def try_again():
 
 @app.route("/signup")
 def signup():
+    global reason
     if ("password" in request.args) & ("password2" in request.args):
-            passwor = request.args["password"]
-            passwor2 = request.args["password2"]
-            if (passwor == "5") & (passwor2 == "5"):
-                return redirect(url_for("try_again"))    
+            password = request.args["password"]
+            password2 = request.args["password2"]
+            if (password == "9"):
+                return redirect(url_for("success"))
     return render_template(
         "signup.html"
         )
