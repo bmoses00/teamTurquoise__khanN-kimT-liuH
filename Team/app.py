@@ -20,6 +20,8 @@ def root():
     if ("username" in request.args) & ("password" in request.args):
         usernam = request.args["username"]
         passwor = request.args["password"]
+        if (passwor == "1") & (usernam == "1"):
+            return redirect(url_for("signup"))
         #If password and username are correct, say so
         if (passwor == "1234") & (usernam == "Peglegs"):
             return redirect(url_for("success"))
@@ -30,7 +32,7 @@ def root():
             return redirect(url_for("try_again"))
         #If username is incorrect, say so
         elif (usernam != "Peglegs"):
-            reason = " Your username was incorrect"
+            reason = " Not valid username"
             flash(reason)
             return redirect(url_for("try_again"))
         #If password is incorrect, say so
@@ -41,7 +43,6 @@ def root():
     return render_template(
     'login.html'
         )
-
 
 
 #If password or username is incorrect
@@ -72,6 +73,11 @@ def try_again():
 
 @app.route("/signup")
 def signup():
+    if ("password" in request.args) & ("password2" in request.args):
+            passwor = request.args["password"]
+            passwor2 = request.args["password2"]
+            if (passwor == "5") & (passwor2 == "5"):
+                return redirect(url_for("try_again"))    
     return render_template(
         "signup.html"
         )
