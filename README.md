@@ -5,6 +5,23 @@
 Assume your audience is cloning your repo and running from localhost.
 List dependencies (pip installs, at most, for this project), as well as how to install/procure them if necessary.
   - working environment (can be named anything)
+        from homedir...
+
+```$ python3 -m venv hero         #hero can be anything
+$ . hero/bin/activate          #DOT('.') is equivalent to bash's source command; it runs a script
+(hero)$ pip3 install flask
+      <write and run Flask code...>
+(hero)$ deactivate
+```
+from working dir...
+
+```
+$ . ~/hero/bin/activate
+(hero)$ pip3 install flask
+      <write and run Flask code...>
+(hero)$ deactivate
+      <now you're back to normal environment>
+```
   - Flask (v. _ _ _)
     - pip installed
   - 
