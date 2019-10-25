@@ -74,11 +74,14 @@ def try_again():
 @app.route("/signup")
 def signup():
     global reason
+    print(url_for("success"))
     if ("password" in request.args) & ("password2" in request.args):
             password = request.args["password"]
             password2 = request.args["password2"]
-            if (password == "9"):
-                return redirect(url_for("success"))
+            if (password == password2):
+                return render_template(
+                'login.html'
+                    )
     return render_template(
         "signup.html"
         )
