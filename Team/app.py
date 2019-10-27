@@ -94,7 +94,8 @@ def createStory():
 @app.route("/loggedIn")
 def success():
     return render_template(
-        "loggedIn.html"
+        "loggedIn.html",
+        storylist = dbFunctions.getStory()
         )
 
 

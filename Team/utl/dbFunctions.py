@@ -71,3 +71,14 @@ def addStory(title, text, date):
         db.commit() #save changes
         db.close()  #close database
         return False
+
+def getStory():
+    DB_FILE="accounts.db"
+    db = sqlite3.connect(DB_FILE)
+    c = db.cursor()
+    command = "SELECT * FROM STORIES;"
+    c.execute(command)
+    new = c.fetchall()
+    db.commit() #save changes
+    db.close()  #close database
+    return new
