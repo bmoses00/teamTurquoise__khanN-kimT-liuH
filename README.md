@@ -2,7 +2,7 @@
 
 # Instructions on How to Run Project 
 
-Dependencies
+# Dependencies
   - working environment (can be named anything)
         from homedir...
 
@@ -24,9 +24,9 @@ Dependencies
     ```(hero)$ deactivate
     <now you're back to normal environment>
     ```
-For any module/library/etc for which special clearance was required, include
-Link to primary documentation
-Succinct, clear explanation of what it does
-Succinct, clear explanation of why you deemed it necessary
-Clear, precise explanation of how it is used in your project
-Use appropriate formatting to denote commands, etc.
+# Module/Library/Etc. with Special Clearance
+    - Link to primary documentation
+    - Succinct, clear explanation of what it does
+    - Succinct, clear explanation of why you deemed it necessary
+    - Clear, precise explanation of how it is used in your project
+    - Use appropriate formatting to denote commands, etc.
