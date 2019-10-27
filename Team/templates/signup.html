@@ -1,27 +1,12 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    {% block title %}
-	<title>
-	  Login
-	</title>
-	{% endblock %}
-  </head>
-  <body>
-    {% block content %}
+{% extends "template.html" %}
+{% block title %}Signup{% endblock %}
+{% block body %}
 	<h1> Sign up </h1>
 
-  {% block flashing %}
-    {% with messages = get_flashed_messages() %}
-    {% if messages %}
-    <div class="messages">
-        {% for message in messages %}
-        <span>{{ message }}</span>
-        {% endfor %}
-    </div>
-    {% endif %}
-    {% endwith %}
-    {% endblock %}
+  {% for message in get_flashed_messages() %}
+    {{ message }}
+    <br>
+  {% endfor %}
 	<form>
 	  Username:
 	  <input type="text" name="username">
@@ -34,8 +19,4 @@
     <br>
     <input type="submit" name="sub1">
     </form>
-
-
 	{% endblock %}
-  </body>
-</html>

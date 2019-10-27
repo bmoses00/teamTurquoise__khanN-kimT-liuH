@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>
-   Form
-	</title>
-</head>
-<body>
+{% extends "template.html" %}
+{% block title %}Welcome{% endblock %}
+{% block body %}
 	<h1> Welcome</h1>
 	<form action="/">
 		<button type="submit"> Logout</button>
 	</form>
-</body>
-</html>
+
+	{% endblock %}

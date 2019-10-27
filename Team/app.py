@@ -12,7 +12,7 @@ import os
 DB_FILE="accounts.db"
 db = sqlite3.connect(DB_FILE) #open if file exists, otherwise create
 #c = db.cursor()
-c = sqlite3.connect('accounts.db', check_same_thread=False)
+c = sqlite3.connect('accounts.db', check_same_thread=False).cursor()
 
 app = Flask(__name__)
 app.secret_key = os.urandom(32)
@@ -81,17 +81,15 @@ def try_again():
 @app.route("/signup")
 def signup():
     global reason
-    print(url_for("success"))
-    if ("username" in request.args) & ("password" in request.args) & ("password2" in request.args):
-            password = request.args["password"]
-            password2 = request.args["password2"]
-            username = request.args["username"]
-            #if (password == password2):
-                #c.execute('''INSERT INTO USERNAMES VALUES("1", "0", "0");''')
-    c.execute('''INSERT INTO USERNAMES VALUES("1", "0", "0");''')
-    return render_template(
-        "signup.html"
-        )
+    #print(url_for("success"))
+    #if ("username" in request.args) & ("password" in request.args) & ("password2" in request.args):
+    #        password = request.args["password"]
+    #        password2 = request.args["password2"]
+    #        username = request.args["username"]
+    #        if (password == password2):
+    #            c.execute('''INSERT INTO USERNAMES VALUES("1", "0", "0");''')
+    c.execute('INSERT INTO USERNAMES VALUES (?, ?, ?)',("2", "pppppp", "e"))
+    return redirect("/")
 
 @app.route("/loggedIn")
 def success():
@@ -102,13 +100,11 @@ def success():
 
 
 
-
+db.commit() #save changes
+db.close()
 
 # page for creating a new story
 
 if __name__ == "__main__":
     app.debug = True
     app.run()
-
-db.commit() #save changes
-db.close() 

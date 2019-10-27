@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>
-   Form
-	</title>
-</head>
-<body>
+{% extends "template.html" %}
+{% block title %}Error{% endblock %}
+{% block body %}
 	<h1> Error </h1>
-
 	<form>
 	  Incorrect Login : {{reasonforError}}
     <br>
@@ -22,3 +16,4 @@
 	<a href="http://127.0.0.1:5000/signup">Signup</a>
 </body>
 </html>
+{% endblock %}
