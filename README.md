@@ -19,8 +19,7 @@
     https://python.org/downloads/
     
   - Git Bash
-    Download from Git's official website for Windows, OS X, and Linux Systems: 
-    https://git-scm.com/downloads
+    Download from Git's official website for Windows, OS X, and Linux Systems:           https://git-scm.com/downloads
     
 # How to Run Our Project
   - working environment (can be named anything)
