@@ -6,9 +6,9 @@
   - working environment (can be named anything)
         from homedir...
 
-    ```$ python3 -m venv hero #hero can be anything
+    ```
+    $ python3 -m venv hero #hero can be anything
     $ . hero/bin/activate  # '.' runs the script
-    (hero)$ deactivate
      ```
     from working dir...
     ```
