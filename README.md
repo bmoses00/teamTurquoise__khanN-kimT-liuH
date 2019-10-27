@@ -14,21 +14,21 @@
 # Our Project
 
 # Prerequisites:
-  - Python 3
+  - [Python 3]
     Download from Python's official website for Windows, OS X, Linux/UNIX, and Other Systems: 
     https://python.org/downloads/
     
-  - Git Bash
+  - [Git Bash]
     Download from Git's official website for Windows, OS X, and Linux Systems:
     https://git-scm.com/downloads
     
-  - SQLite 3
+  - [SQLite 3]
     Download from SQLite's official website for Windows, OS X, and Linux Systems:
     https://www.sqlite.org/download.html
   
-  - Flask
+  - [Flask]
     Download through the creation of a virtual environment. The instructions for this are located under:
-    [How to Run Our Project]
+    (How to Run Our Project)
     
 # How to Run Our Project
   - working environment (can be named anything)
