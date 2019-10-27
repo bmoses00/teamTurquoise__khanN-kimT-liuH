@@ -1,4 +1,5 @@
 # Collaborative storytelling game/website by teamTurquoise
+
 # Nahi - Process Managament
      - Mainly Quality Control
      - Overseer over the entire assignment, helping each team member with tasks
@@ -9,16 +10,19 @@
 # Taejoon - SQL Backend
      - Made csv files to expedite output based off program input
      - Made the database builder file whilst combining it to the app.py
-# Instructions on How to Run Project 
+     
+# Our Project
 
 # Prerequisites:
-  - python3
+  - Python 3
     ```
     Download from Python's official website for Windows, OS X, and Linux Systems: https://python.org/downloads/
     ```
-  - git bash
+  - Git Bash
     ```
     Download from Git's official website for Windows, OS X, and Linux Systems: https://git-scm.com/downloads
+    
+# How to Run Our Project
   - working environment (can be named anything)
         from homedir...
 
