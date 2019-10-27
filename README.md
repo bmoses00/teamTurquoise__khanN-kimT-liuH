@@ -8,11 +8,11 @@
 
     ```
     $ python3 -m venv hero #hero can be anything
-    $ . hero/bin/activate  # '.' runs the script
+  
      ```
     from working dir...
     ```
-    $ . ~/hero/bin/activate
+    $ . ~/hero/bin/activate # '.' runs the script
     
      ```
   - Flask (v. _ _ _)
@@ -27,7 +27,8 @@
     <now you're back to normal environment>
     ```
 # Module/Library/Etc. with Special Clearance
-  - Link to primary documentation
+  - Link(s) to primary documentation
+  
   https://stackoverflow.com/questions/3070384/how-to-store-a-list-in-a-column-of-a-database-table
   https://www.dummies.com/web-design-development/site-development/how-to-put-text-boxes-in-an-html5-form/
   https://stackoverflow.com/questions/34329852/how-to-insert-date-values-into-table
