@@ -17,7 +17,8 @@
      ```
   - Flask (v. _ _ _)
     - pip installed
-      ```(hero)$ pip3 install flask
+      ```
+      (hero)$ pip3 install flask
       <write and run Flask code...>
       ```
     from working dir (as well) If user wants to exit the environment:
