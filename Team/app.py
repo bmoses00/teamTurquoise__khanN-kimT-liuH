@@ -5,7 +5,13 @@ from flask import redirect
 from flask import url_for
 from flask import flash
 from flask import session
+import sqlite3
 import os
+
+
+DB_FILE="accounts.db"
+db = sqlite3.connect(DB_FILE) #open if file exists, otherwise create
+c = db.cursor()
 
 app = Flask(__name__)
 app.secret_key = os.urandom(32)
