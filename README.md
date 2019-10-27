@@ -6,8 +6,8 @@
   - working environment (can be named anything)
         from homedir...
 
-    ```$ python3 -m venv hero         #hero can be anything
-    $ . hero/bin/activate          #DOT('.') is equivalent to bash's source command; it runs a script
+    ```$ python3 -m venv hero #hero can be anything
+    $ . hero/bin/activate  # '.' runs the script
     (hero)$ deactivate
      ```
     from working dir...
@@ -21,7 +21,8 @@
       <write and run Flask code...>
       ```
     from working dir (as well) If user wants to exit the environment:
-    ```(hero)$ deactivate
+    ```
+    (hero)$ deactivate
     <now you're back to normal environment>
     ```
 # Module/Library/Etc. with Special Clearance
