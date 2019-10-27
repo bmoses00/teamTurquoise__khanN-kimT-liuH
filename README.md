@@ -11,12 +11,14 @@
      - Made the database builder file whilst combining it to the app.py
 # Instructions on How to Run Project 
 
-# Dependencies
+# Prerequisites:
   - python3
     ```
-    Download from Python's official website: python.org/downloads/
+    Download from Python's official website for Windows, OS X, and Linux Systems: https://python.org/downloads/
     ```
   - git bash
+    ```
+    Download from Git's official website for Windows, OS X, and Linux Systems: https://git-scm.com/downloads
   - working environment (can be named anything)
         from homedir...
 
