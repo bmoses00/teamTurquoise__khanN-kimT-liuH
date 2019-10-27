@@ -87,7 +87,7 @@ def createStory():
         dbFunctions.addStory(title, text, date)
         return redirect(url_for("success"))
     else:
-        reason = "ERROR"
+        reason = "ERROR, Enter a different title"
         flash(reason)
     return render_template('createStory.html')
 
