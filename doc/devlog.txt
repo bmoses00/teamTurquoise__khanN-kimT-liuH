@@ -7,6 +7,11 @@ tables to finish up on the layout. We looked at other teams design docs and we
 improved ours by learning from it.
 
 taejoonK -- 2019-10-23 23:54
-I added onto the db builder extra code and substituted the would-be variables with random values. 
+I added onto the db builder extra code and substituted the would-be variables with random values.
 Still figuring out on how to incorporate it with the main flask app.
 
+henryL-- 2019-10-23 14:20
+I worked on the different pages: signup, login, loggedIn, and error. I also started the app.py file to
+get everything connected
+
+henryL-- 2019-10-27 11:20
