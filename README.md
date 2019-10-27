@@ -12,6 +12,11 @@
 # Instructions on How to Run Project 
 
 # Dependencies
+  - python3
+    ```
+    Download from Python's official website: python.org/downloads/
+    ```
+  - git bash
   - working environment (can be named anything)
         from homedir...
 
@@ -30,6 +35,11 @@
       (hero)$ pip3 install flask
       <write and run Flask code...>
       ```
+      
+      ```
+      
+      
+      
     from working dir (as well) If user wants to exit the environment:
     ```
     (hero)$ deactivate
