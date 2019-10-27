@@ -33,8 +33,7 @@ def root():
             return redirect(url_for("success"))
         #If credentials incorrect
         else:
-            reason = "invalid"
-            flash(reason)
+            reason = "Invalid credentials"
             return redirect(url_for("try_again"))
     return render_template(
     'login.html'
@@ -53,8 +52,7 @@ def try_again():
                 return redirect(url_for("success"))
             #If credentials incorrect
             else:
-                reason = "invalid"
-                flash(reason)
+                reason = "Invalid credentials"
                 return redirect(url_for("try_again"))
     return render_template(
         'error.html',reasonforError=reason
@@ -68,10 +66,15 @@ def signup():
         password2 = request.args["password2"]
         username = request.args["username"]
         if (password == password2):
-            dbFunctions.addUser(username,password)
-            return redirect(url_for("success"))
+            if (dbFunctions.addUser(username,password)):
+                dbFunctions.addUser(username,password)
+                return redirect(url_for("success"))
+        if (password != password2):
+            reason = "Passwords don't match"
+            flash(reason)
+
         else:
-            reason = "Passwords don't match, try again"
+            reason = "Username taken, try again"
             flash(reason)
 
     return render_template('signup.html')
@@ -84,11 +87,13 @@ def createStory():
         title = request.args["title"]
         text = request.args["text"]
         date = request.args["date"]
-        dbFunctions.addStory(title, text, date)
-        return redirect(url_for("success"))
-    else:
-        reason = "ERROR, Enter a different title"
-        flash(reason)
+        if (dbFunctions.addStory(title, text, date)):
+            dbFunctions.addStory(title, text, date)
+            return redirect(url_for("success"))
+        else:
+            reason = "ERROR, Enter a different title"
+            flash(reason)
+
     return render_template('createStory.html')
 
 @app.route("/loggedIn")
