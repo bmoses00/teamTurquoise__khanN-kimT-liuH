@@ -1,4 +1,4 @@
-# Collaborative storytelling game/website by teamTurquoise
+# Collaborative Storytelling Game/Website by teamTurquoise
 
 # Nahi - Process Managament
      - Mainly Quality Control
