@@ -50,3 +50,24 @@ def addUser(username, password):
         db.commit() #save changes
         db.close()  #close database
         return False
+
+def addStory(title, text, date):
+    DB_FILE="accounts.db"
+    db = sqlite3.connect(DB_FILE)
+    c = db.cursor()
+    command = "SELECT id, title FROM STORIES WHERE title = \"{}\";".format(title)
+    c.execute(command)
+    new = c.fetchall()
+    if len(new) == 0:
+        command = "SELECT id FROM STORIES;"
+        c.execute(command)
+        q = c.fetchall()
+        command = "INSERT INTO STORIES VALUES({}, \"{}\", \"{}\", \"{}\");".format(q[len(q)-1][0]+1,title,text,date)
+        c.execute(command)
+        db.commit() #save changes
+        db.close()  #close database
+        return True
+    else:
+        db.commit() #save changes
+        db.close()  #close database
+        return False

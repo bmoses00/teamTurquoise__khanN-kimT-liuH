@@ -1,0 +1,22 @@
+{% extends "template.html" %}
+{% block title %}Create Story{% endblock %}
+{% block body %}
+	<h1> Sign up </h1>
+
+  {% for message in get_flashed_messages() %}
+    {{ message }}
+    <br>
+  {% endfor %}
+	<form>
+	  Title:
+	  <input type="text" name="title">
+	  <br>
+	  Text:
+	  <input type="text" name="text">
+    <br>
+    date:
+	  <input type="text" name="date">
+    <br>
+    <input type="submit" name="sub1">
+    </form>
+	{% endblock %}

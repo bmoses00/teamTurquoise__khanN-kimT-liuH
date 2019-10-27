@@ -70,7 +70,26 @@ def signup():
         if (password == password2):
             dbFunctions.addUser(username,password)
             return redirect(url_for("success"))
+        else:
+            reason = "Passwords don't match, try again"
+            flash(reason)
+
     return render_template('signup.html')
+
+
+@app.route("/createStory")
+def createStory():
+    global reason
+    if ("title" in request.args) & ("text" in request.args) & ("date" in request.args):
+        title = request.args["title"]
+        text = request.args["text"]
+        date = request.args["date"]
+        dbFunctions.addStory(title, text, date)
+        return redirect(url_for("success"))
+    else:
+        reason = "ERROR"
+        flash(reason)
+    return render_template('createStory.html')
 
 @app.route("/loggedIn")
 def success():
