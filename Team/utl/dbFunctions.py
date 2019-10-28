@@ -51,7 +51,7 @@ def addUser(username, password):
         db.close()  #close database
         return False
 
-def addStory(title, text, date):
+def addStory(title, userID, text):
     DB_FILE="accounts.db"
     db = sqlite3.connect(DB_FILE)
     c = db.cursor()
@@ -62,7 +62,9 @@ def addStory(title, text, date):
         command = "SELECT storyID FROM STORIES;"
         c.execute(command)
         q = c.fetchall()
-        command = "INSERT INTO STORIES VALUES({}, \"{}\", \"{}\", \"{}\");".format(q[len(q)-1][0]+1,title,text,date)
+        command = "INSERT INTO STORIES VALUES({}, \"{}\");".format(q[len(q)-1][0]+1,title)
+        c.execute(command)
+        command = "INSERT INTO STORYEDITS VALUES({}, \"{}\",\"{}\");".format(q[len(q)-1][0]+1,userID,text)
         c.execute(command)
         db.commit() #save changes
         db.close()  #close database
@@ -72,19 +74,18 @@ def addStory(title, text, date):
         db.close()  #close database
         return False
 
-def editStory(ID, TEXT):
+def addToStory(storyID, userID, text):
     DB_FILE="accounts.db"
     db = sqlite3.connect(DB_FILE)
     c = db.cursor()
-    command = "SELECT storyID, storyID FROM STORIES WHERE storyID = \"{}\";".format(ID)
+    command = "SELECT storyID, storyID FROM STORIES WHERE storyID = \"{}\";".format(storyID)
     c.execute(command)
     new = c.fetchall()
     if len(new) == 1:
-        command = "SELECT storyID FROM STORIES;"
+        command = "SELECT storyID FROM STORYEDITS;"
         c.execute(command)
         q = c.fetchall()
-        command = "UPDATE STORIES SET text = TEXT WHERE storyID = ID;"
-
+        command = "INSERT INTO STORYEDITS VALUES(\"{}\",\"{}\",\"{}\");".format(storyID,userID,text)
         c.execute(command)
         db.commit() #save changes
         db.close()  #close database
@@ -114,7 +115,7 @@ def getStory1():
     DB_FILE="accounts.db"
     db = sqlite3.connect(DB_FILE)
     c = db.cursor()
-    command = "SELECT * FROM STORIES;"
+    command = "SELECT * FROM STORYEDITS;"
     c.execute(command)
     new = c.fetchall()
     db.commit() #save changes

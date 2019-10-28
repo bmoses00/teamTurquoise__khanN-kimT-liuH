@@ -19,7 +19,7 @@ c.execute('''CREATE TABLE IF NOT EXISTS USERNAMES(
 c.execute('''CREATE TABLE IF NOT EXISTS STORIES
              ([storyID] INTEGER PRIMARY KEY, [title] text NOT NULL);''')
 c.execute('''CREATE TABLE IF NOT EXISTS STORYEDITS
-             ([storyID] INTEGER, [userID] INTEGER, [text] text NOT NULL, [Date] text);''')
+             ([storyID] INTEGER, [userID] INTEGER, [text] text NOT NULL);''')
 
 
 
@@ -88,31 +88,31 @@ def signup():
     return render_template('signup.html')
 
 
-@app.route("/createStory")
+@app.route("/addStory")
 def createStory():
     global reason
-    if ("title" in request.args) & ("text" in request.args) & ("date" in request.args):
+    if ("title" in request.args) & ("userID" in request.args) & ("text" in request.args) :
         title = request.args["title"]
+        userID = request.args["userID"]
         text = request.args["text"]
-        date = request.args["date"]
-        if (dbFunctions.addStory(title, text, date)):
-            dbFunctions.addStory(title, text, date)
+        if (dbFunctions.addStory(title, userID, text)):
+            dbFunctions.addStory(title, userID, text)
             return redirect(url_for("success"))
         else:
             reason = "ERROR, Enter a different title"
             flash(reason)
 
-    return render_template('createStory.html')
+    return render_template('addStory.html')
 
 
 @app.route("/addToStory")
 def addToStory():
     global reason
-    if ("storyID" in request.args) & ("text" in request.args):
+    if ("storyID" in request.args) & ("userID" in request.args) & ("text" in request.args):
         storyID = request.args["storyID"]
+        userID = request.args["userID"]
         text = request.args["text"]
-        if (dbFunctions.editStory(storyID, text)):
-            dbFunctions.editStory(storyID, text)
+        if (dbFunctions.addToStory(storyID, userID, text)):
             return redirect(url_for("success"))
         else:
             reason = "ERROR"

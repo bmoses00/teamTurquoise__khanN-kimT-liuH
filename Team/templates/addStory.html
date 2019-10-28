@@ -9,7 +9,10 @@
   {% endfor %}
 	<form>
 	  Title:
-	  <input type="text" name="storyID">
+	  <input type="text" name="title">
+	  <br>
+		userID:
+	  <input type="text" name="userID">
 	  <br>
     <label for="content">Content:</label>
     <br>
@@ -18,9 +21,8 @@
         required></textarea>
 
     <br>
-    Date:
-	  <input type="text" name="date">
-    <br>
+
     <input type="submit" name="sub1">
     </form>
+		<a href="http://127.0.0.1:5000/loggedIn ">Go back</a></td>
 	{% endblock %}
