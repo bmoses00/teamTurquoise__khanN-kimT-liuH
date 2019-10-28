@@ -73,7 +73,7 @@ def addStory(title, userID, text):
         db.commit() #save changes
         db.close()  #close database
         return False
-
+#def canADD(storyID, userID)
 def addToStory(storyID, userID, text):
     DB_FILE="accounts.db"
     db = sqlite3.connect(DB_FILE)
@@ -111,11 +111,32 @@ def getStory(title):
     db.close()  #close database
     return new
 
-def getStory1():
+def almagate(): #should be in order
     DB_FILE="accounts.db"
     db = sqlite3.connect(DB_FILE)
     c = db.cursor()
     command = "SELECT * FROM STORYEDITS;"
+    c.execute(command)
+    new = c.fetchall()
+    command = "SELECT storyID FROM STORIES;"
+    c.execute(command)
+    storyIDs = c.fetchall()
+    l = []
+    oldtext = ""
+    for storyID in storyIDs:
+        for row in new:
+            if storyID == row[0]:
+                oldtext += row[2]
+        l[storyID[0]] = oldtext
+    db.commit() #save changes
+    db.close()  #close database
+    return new
+
+def getStory1():
+    DB_FILE="accounts.db"
+    db = sqlite3.connect(DB_FILE)
+    c = db.cursor()
+    command = "SELECT * FROM STORIES;"
     c.execute(command)
     new = c.fetchall()
     db.commit() #save changes
