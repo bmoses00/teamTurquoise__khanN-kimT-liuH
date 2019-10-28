@@ -15,9 +15,11 @@ db = sqlite3.connect(DB_FILE) #open if file exists, otherwise create
 c = db.cursor()
 #c = sqlite3.connect('accounts.db', check_same_thread=False).cursor()
 c.execute('''CREATE TABLE IF NOT EXISTS USERNAMES(
-            [id] INTEGER PRIMARY KEY, [username] text NOT NULL, [password] text);''')
+            [userID] INTEGER PRIMARY KEY, [username] text NOT NULL, [password] text);''')
 c.execute('''CREATE TABLE IF NOT EXISTS STORIES
-             ([id] INTEGER PRIMARY KEY, [title] text NOT NULL, [TEXT] text, [Date] text);''')
+             ([storyID] INTEGER PRIMARY KEY, [title] text NOT NULL);''')
+c.execute('''CREATE TABLE IF NOT EXISTS STORYEDITS
+             ([storyID] INTEGER, [userID] INTEGER, [text] text NOT NULL, [Date] text);''')
 
 
 
@@ -74,7 +76,7 @@ def signup():
         if (password == password2):
             if (dbFunctions.addUser(username,password)):
                 dbFunctions.addUser(username,password)
-                return redirect(url_for("success"))
+                return redirect(url_for("root"))
         if (password != password2):
             reason = "Passwords don't match"
             flash(reason)
@@ -106,11 +108,11 @@ def createStory():
 @app.route("/addToStory")
 def addToStory():
     global reason
-    if ("id" in request.args) & ("text" in request.args):
-        id = request.args["id"]
+    if ("storyID" in request.args) & ("text" in request.args):
+        storyID = request.args["storyID"]
         text = request.args["text"]
-        if (dbFunctions.editStory(id, text)):
-            dbFunctions.editStory(id, text)
+        if (dbFunctions.editStory(storyID, text)):
+            dbFunctions.editStory(storyID, text)
             return redirect(url_for("success"))
         else:
             reason = "ERROR"

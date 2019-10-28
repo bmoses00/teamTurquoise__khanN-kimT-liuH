@@ -5,7 +5,7 @@ def accountExists(username, password):
     DB_FILE= "accounts.db"
     db = sqlite3.connect(DB_FILE)
     c = db.cursor()
-    command = "SELECT id, username FROM USERNAMES WHERE username = \"{}\" AND password = \"{}\";".format(username, password)
+    command = "SELECT userID, username FROM USERNAMES WHERE username = \"{}\" AND password = \"{}\";".format(username, password)
     c.execute(command)
     q = c.fetchall()
     db.commit() #save changes
@@ -20,7 +20,7 @@ def userExists(username):
     DB_FILE="accounts.db"
     db = sqlite3.connect(DB_FILE)
     c = db.cursor()
-    command = "SELECT id, username FROM USERNAMES WHERE username = \"{}\";".format(username)
+    command = "SELECT userID, username FROM USERNAMES WHERE username = \"{}\";".format(username)
     c.execute(command)
     q = c.fetchall()
     db.commit() #save changes
@@ -34,11 +34,11 @@ def addUser(username, password):
     DB_FILE="accounts.db"
     db = sqlite3.connect(DB_FILE)
     c = db.cursor()
-    command = "SELECT id, username FROM USERNAMES WHERE username = \"{}\";".format(username)
+    command = "SELECT userID, username FROM USERNAMES WHERE username = \"{}\";".format(username)
     c.execute(command)
     new = c.fetchall()
     if len(new) == 0:
-        command = "SELECT id FROM USERNAMES;"
+        command = "SELECT userID FROM USERNAMES;"
         c.execute(command)
         q = c.fetchall()
         command = "INSERT INTO USERNAMES VALUES({}, \"{}\", \"{}\");".format(q[len(q)-1][0]+1,username,password)
@@ -55,11 +55,11 @@ def addStory(title, text, date):
     DB_FILE="accounts.db"
     db = sqlite3.connect(DB_FILE)
     c = db.cursor()
-    command = "SELECT id, title FROM STORIES WHERE title = \"{}\";".format(title)
+    command = "SELECT storyID, title FROM STORIES WHERE title = \"{}\";".format(title)
     c.execute(command)
     new = c.fetchall()
     if len(new) == 0:
-        command = "SELECT id FROM STORIES;"
+        command = "SELECT storyID FROM STORIES;"
         c.execute(command)
         q = c.fetchall()
         command = "INSERT INTO STORIES VALUES({}, \"{}\", \"{}\", \"{}\");".format(q[len(q)-1][0]+1,title,text,date)
@@ -76,14 +76,14 @@ def editStory(ID, TEXT):
     DB_FILE="accounts.db"
     db = sqlite3.connect(DB_FILE)
     c = db.cursor()
-    command = "SELECT id, id FROM STORIES WHERE id = \"{}\";".format(id)
+    command = "SELECT storyID, storyID FROM STORIES WHERE storyID = \"{}\";".format(ID)
     c.execute(command)
     new = c.fetchall()
     if len(new) == 1:
-        command = "SELECT id FROM STORIES;"
+        command = "SELECT storyID FROM STORIES;"
         c.execute(command)
         q = c.fetchall()
-        command = "UPDATE STORIES SET text = TEXT WHERE id = ID;"
+        command = "UPDATE STORIES SET text = TEXT WHERE storyID = ID;"
 
         c.execute(command)
         db.commit() #save changes
