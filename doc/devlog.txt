@@ -43,3 +43,5 @@ Just realized that code only works if there is a dummy user and story.
 henryL -- 2019-10-28 00:50
 Not sure if we can finish in time. We still need to add to functionality
  so that users can edit stories that they have not edited yet
+
+**LOOKING INTO ADDING TO THIS DOC LATER, NOT FINISHED, NEED ENTRIES FOR EACH DAY, WHETHER IT BE SUBSTANTIAL WORK OR NOT**

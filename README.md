@@ -32,14 +32,14 @@
     
 # How to Run Our Project
 
- 1. Cloning
+ **1.** Cloning
    - Go to the main page of the repository teamTurquoise__khanN-kimT-liuH
    - Clone using HTTPS
    - Open Git Bash and change the current working directory to the location where you want the cloned directory to be made
    - Then type ```git clone``` into git bash followed by the copied HTTPS link of the repo wishing to be cloned
    - Pressing enter will lead to the creation of the local clone
  
- 2. Creation and Activation of a Virtual Environment
+ **2.** Creation and Activation of a Virtual Environment
    - working environment (can be named anything)
         from homedir...
 
@@ -52,28 +52,29 @@
       $ . ~/hero/bin/activate # '.' runs the script
       ```  
      
- 3. Installation of Flask (through virtual environment)
+ **3.** Installation of Flask (through virtual environment)
    - pip installed
       ```
       (hero)$ pip3 install flask
       <write and run Flask code...>
       ```
- 4. Running the Project
+ **4.** Running the Project
+   - from workingdir:
       ```
       $ cd <name of cloned directory>
       /<name of cloned directory>$ python3 db.py
       /<name of cloned directory>$ python3 app.py
       ```
       
- 5. Visit the webpage by opening a web browser and entering:
- http://127.0.0.1:5000/
+ **5.** Visit our webpage to view its contents @:
+   - http://127.0.0.1:5000/
       
- 6. Exiting Flask Environment (Optional)   
- from working dir -- If user wants to exit the environment:
+ **6.** Exiting Flask Environment (Optional)   
+   - from working dir -- (if user wants to exit the environment):
       ```
      (hero)$ deactivate
      ```
-     <now you're back to normal environment>
+   - <now you're back to normal environment>
       
 # Module/Library/Etc. with Special Clearance
   - Link(s) to primary documentation:
@@ -115,4 +116,4 @@
      Just in case a person does not know how to clone, hence the link
      Used to aid in the cloning process of our repo for our project
   
-  © 2019 teamTurquoise, Inc. 😈🤑😎
+  © 2019 teamTurquoise, Inc. 😈🤑😎 
