@@ -36,3 +36,6 @@ Working on the README file on crystal clear instructions for any given user to u
 
 henryL -- 2019-10-27 20:20
 Realized that we need to allow users to edit a story
+
+henryL -- 2019-10-28 00:20
+Just realized that code only works if there is a dummy user and story.
