@@ -29,3 +29,7 @@ henryL -- 2019-10-27 11:20
 
 nahiK -- 2019-10-27 20:10
 Working on the README file on crystal clear instructions for any given user to utilize and run our project.
+
+taejoonK -- 2019-10-27 22:33
+Worked on displaying the data from the db files as html tables. Also created a search bar but took more time
+than it should've had because I tried using polymorphism in a wrong way. 
