@@ -121,16 +121,19 @@ def almagate(): #should be in order
     command = "SELECT storyID FROM STORIES;"
     c.execute(command)
     storyIDs = c.fetchall()
-    l = []
+    l = ["HIZ","HIZ"]
     oldtext = ""
     for storyID in storyIDs:
+        print (storyID)
         for row in new:
+            print (row)
             if storyID == row[0]:
                 oldtext += row[2]
         l[storyID[0]] = oldtext
+        oldtext = ""
     db.commit() #save changes
     db.close()  #close database
-    return new
+    return l
 
 def getStory1():
     DB_FILE="accounts.db"
