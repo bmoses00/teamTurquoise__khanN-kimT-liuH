@@ -67,7 +67,7 @@
  5. Visit the webpage by opening a web browser and entering:
  http://127.0.0.1:5000/
       
- (Last Step)   
+ 6. Exiting Flask Environment (Optional)   
  from working dir (as well) If user wants to exit the environment:
     
     (hero)$ deactivate
