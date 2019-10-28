@@ -122,9 +122,15 @@ def addToStory():
 
 @app.route("/loggedIn")
 def success():
+    global story
+    if ("search" in request.args):
+        search = request.args["search"]
+        story = dbFunctions.getStory(search)
+    else:
+        story = dbFunctions.getStory1()
     return render_template(
         "loggedIn.html",
-        storylist = dbFunctions.getStory()
+        storylist = story
         )
 
 

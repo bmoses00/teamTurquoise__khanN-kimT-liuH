@@ -95,7 +95,22 @@ def editStory(ID, TEXT):
         return False
 
 
-def getStory():
+def getStory(title):
+    DB_FILE="accounts.db"
+    db = sqlite3.connect(DB_FILE)
+    c = db.cursor()
+    command = ""
+    if len(title) > 0:
+        command = "SELECT * FROM STORIES WHERE title = \"{}\";".format(title)
+    else:
+        command = "SELECT * FROM STORIES;"
+    c.execute(command)
+    new = c.fetchall()
+    db.commit() #save changes
+    db.close()  #close database
+    return new
+
+def getStory1():
     DB_FILE="accounts.db"
     db = sqlite3.connect(DB_FILE)
     c = db.cursor()

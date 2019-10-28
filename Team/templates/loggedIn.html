@@ -6,6 +6,15 @@
 		<button type="submit"> Logout</button>
 	</form>
 	<a href="http://127.0.0.1:5000/createStory">Create Story</a>
+	<a href="http://127.0.0.1:5000/addToStory ">Add to Story</a>
+
+
+	<h2> Welcome</h2>
+
+	<form action = "/loggedIn">
+	Search: <input type="text" name="search">
+	<br>
+	<input type="submit" name="sub1">
 
 	<table>
 		{% for stories in storylist%}
@@ -13,10 +22,10 @@
 			<td>{{stories[0]}}</td>
 			<td>{{stories[1]}}</td>
 			<td>{{stories[2]}}</td>
-			<td><a href="http://127.0.0.1:5000/addToStory">Add to Story</a></td>
+			<td>{{stories[3]}}</td>
 		</tr>
 		{% endfor %}
 	</table>
-
+	</form>
 
 {% endblock %}
