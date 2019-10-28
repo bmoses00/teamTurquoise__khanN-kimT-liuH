@@ -6,6 +6,12 @@ Henry was able to visualize the database layout diagram. In this, he utilized
 tables to finish up on the layout. We looked at other teams design docs and we
 improved ours by learning from it.
 
+nahiK -- 2019-10-21 
+Edited the physical component map in order for the app to run and correlate smoothly.
+
+nahiK -- 2019-10-22
+Finished working on the component map, thinking this was the final revision.
+ 
 taejoonK -- 2019-10-23 23:54
 I added onto the db builder extra code and substituted the would-be variables with random values.
 Still figuring out on how to incorporate it with the main flask app.
@@ -17,7 +23,7 @@ get everything connected
 nahiK -- 2019-10-23 14:23
 Aided Henry in the creation of the templates for signup and error. Suggested the idea of the error page.
 
-taejoonK -- Pushed my parts of the backend code on the tables to the repository. I introduced the data grouping method of tuples to PM Nahi.
+taejoonK -- 2019-10-24 Pushed my parts of the backend code on the tables to the repository. I introduced the data grouping method of tuples to PM Nahi.
 
 nahiK -- 2019-10-25 17:30
 Cloned Taejoon's part of the backend and helped with the creation of the tables. He suggested grouping data through the usage of tuples.
