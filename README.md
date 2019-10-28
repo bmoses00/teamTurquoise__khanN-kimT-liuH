@@ -89,4 +89,4 @@
   - Clear, precise explanation of how it is used in your project
   - Use appropriate formatting to denote commands, etc.
   
-  © 2019 teamTurquoise, Inc.
+  © 2019 teamTurquoise, Inc. 😎😎😎
