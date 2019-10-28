@@ -53,14 +53,15 @@
     
      
  3. Installation of Flask (through virtual environment)
-   - Flask (v. _ _ _)
-    - pip installed
+   - pip installed
       ```
       (hero)$ pip3 install flask
       <write and run Flask code...>
       ```
+ 4. 
       
-    from working dir (as well) If user wants to exit the environment:
+ (Last Step)   
+ from working dir (as well) If user wants to exit the environment:
     
     (hero)$ deactivate
     <now you're back to normal environment>
