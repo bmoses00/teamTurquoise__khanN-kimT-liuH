@@ -61,6 +61,7 @@
  4. Running the Project
       ```
       $ cd <name of cloned directory>
+      /<name of cloned directory>$ python3 db.py
       /<name of cloned directory>$ python3 app.py
       ```
       
