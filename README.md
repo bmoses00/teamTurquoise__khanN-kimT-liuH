@@ -71,8 +71,9 @@
  from working dir -- If user wants to exit the environment:
       ```
      (hero)$ deactivate
+     ```
      <now you're back to normal environment>
-      ```
+      
 # Module/Library/Etc. with Special Clearance
   - Link(s) to primary documentation
   
