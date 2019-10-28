@@ -10,8 +10,21 @@ taejoonK -- 2019-10-23 23:54
 I added onto the db builder extra code and substituted the would-be variables with random values.
 Still figuring out on how to incorporate it with the main flask app.
 
-henryL-- 2019-10-23 14:20
+henryL -- 2019-10-23 14:20
 I worked on the different pages: signup, login, loggedIn, and error. I also started the app.py file to
 get everything connected
 
-henryL-- 2019-10-27 11:20
+nahiK -- 2019-10-23 14:23
+Aided Henry in the creation of the templates for signup and error. Suggested the idea of the error page.
+
+taejoonK -- Pushed my parts of the backend code on the tables to the repository. I introduced the data grouping method of tuples to PM Nahi.
+nahiK -- 2019-10-25 17:30
+Cloned Taejoon's part of the backend and helped with the creation of the tables. He suggested grouping data through the usage of tuples.
+
+nahiK -- 2019-10-26 18:47
+Worked on the hardcopy instructions on how to read and process our code.
+
+henryL -- 2019-10-27 11:20
+
+nahiK -- 2019-10-27 20:10
+Working on the README file on crystal clear instructions for any given user to utilize and run our project.
