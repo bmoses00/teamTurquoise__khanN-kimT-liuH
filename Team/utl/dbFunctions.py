@@ -72,6 +72,29 @@ def addStory(title, text, date):
         db.close()  #close database
         return False
 
+def editStory(ID, TEXT):
+    DB_FILE="accounts.db"
+    db = sqlite3.connect(DB_FILE)
+    c = db.cursor()
+    command = "SELECT id, id FROM STORIES WHERE id = \"{}\";".format(id)
+    c.execute(command)
+    new = c.fetchall()
+    if len(new) == 1:
+        command = "SELECT id FROM STORIES;"
+        c.execute(command)
+        q = c.fetchall()
+        command = "UPDATE STORIES SET text = TEXT WHERE id = ID;"
+
+        c.execute(command)
+        db.commit() #save changes
+        db.close()  #close database
+        return True
+    else:
+        db.commit() #save changes
+        db.close()  #close database
+        return False
+
+
 def getStory():
     DB_FILE="accounts.db"
     db = sqlite3.connect(DB_FILE)
