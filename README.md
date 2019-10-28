@@ -68,7 +68,7 @@
  http://127.0.0.1:5000/
       
  6. Exiting Flask Environment (Optional)   
- from working dir (as well) If user wants to exit the environment:
+ from working dir -- If user wants to exit the environment:
     
     (hero)$ deactivate
     <now you're back to normal environment>
