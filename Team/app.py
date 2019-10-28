@@ -18,12 +18,9 @@ c.execute('''CREATE TABLE IF NOT EXISTS USERNAMES(
             [id] INTEGER PRIMARY KEY, [username] text NOT NULL, [password] text);''')
 c.execute('''CREATE TABLE IF NOT EXISTS STORIES
              ([id] INTEGER PRIMARY KEY, [title] text NOT NULL, [TEXT] text, [Date] text);''')
-#c.execute('''
-#     INSERT INTO STORIES VALUES(1, "The Green Pancake", "blah blah blah", "2019-09-10");
-# ''')
-#c.execute('''
-#     INSERT INTO USERNAMES VALUES(1, "username", "password");
-# ''')
+
+
+
 app = Flask(__name__)
 app.secret_key = os.urandom(32)
 reason = ""
@@ -122,15 +119,9 @@ def addToStory():
 
 @app.route("/loggedIn")
 def success():
-    global story
-    if ("search" in request.args):
-        search = request.args["search"]
-        story = dbFunctions.getStory(search)
-    else:
-        story = dbFunctions.getStory1()
     return render_template(
         "loggedIn.html",
-        storylist = story
+        storylist = dbFunctions.getStory1()
         )
 
 

@@ -26,10 +26,13 @@ nahiK -- 2019-10-26 18:47
 Worked on the hardcopy instructions on how to read and process our code.
 
 henryL -- 2019-10-27 11:20
+Added a template html to make code look neater
+
+henryL -- 2019-10-27 17:20
+Added an addToStory page
 
 nahiK -- 2019-10-27 20:10
 Working on the README file on crystal clear instructions for any given user to utilize and run our project.
 
-taejoonK -- 2019-10-27 22:33
-Worked on displaying the data from the db files as html tables. Also created a search bar but took more time
-than it should've had because I tried using polymorphism in a wrong way. 
+henryL -- 2019-10-27 20:20
+Realized that we need to allow users to edit a story
