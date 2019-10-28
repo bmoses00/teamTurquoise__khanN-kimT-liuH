@@ -59,21 +59,22 @@
       <write and run Flask code...>
       ```
  **4.** Running the Project
+   - from workingdir:
       ```
       $ cd <name of cloned directory>
       /<name of cloned directory>$ python3 db.py
       /<name of cloned directory>$ python3 app.py
       ```
       
- **5.** Visit the webpage by opening a web browser and entering:
- http://127.0.0.1:5000/
+ **5.** Visit our webpage to view its contents @:
+   - http://127.0.0.1:5000/
       
  **6.** Exiting Flask Environment (Optional)   
- from working dir -- If user wants to exit the environment:
+   - from working dir -- (if user wants to exit the environment):
       ```
      (hero)$ deactivate
      ```
-     <now you're back to normal environment>
+   - <now you're back to normal environment>
       
 # Module/Library/Etc. with Special Clearance
   - Link(s) to primary documentation:
