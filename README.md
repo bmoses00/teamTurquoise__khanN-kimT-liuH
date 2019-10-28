@@ -33,14 +33,14 @@
 # How to Run Our Project
 
  1. Cloning
-  - Go to the main page of the repository teamTurquoise__khanN-kimT-liuH
-  - Clone using HTTPS
-  - Open Git Bash and change the current working directory to the location where you want the cloned directory to be made
-  - Then type ```git clone``` into git bash followed by the copied HTTPS link of the repo wishing to be cloned
-  - Pressing enter will lead to the creation of the local clone
+   - Go to the main page of the repository teamTurquoise__khanN-kimT-liuH
+   - Clone using HTTPS
+   - Open Git Bash and change the current working directory to the location where you want the cloned directory to be made
+   - Then type ```git clone``` into git bash followed by the copied HTTPS link of the repo wishing to be cloned
+   - Pressing enter will lead to the creation of the local clone
  
  2. Creation and Activation of a Virtual Environment
-  - working environment (can be named anything)
+   - working environment (can be named anything)
         from homedir...
 
     ```
@@ -52,8 +52,8 @@
     $ . ~/hero/bin/activate # '.' runs the script
     
      ```
-  3. Installation of Flask (through virtual environment)
-  - Flask (v. _ _ _)
+ 3. Installation of Flask (through virtual environment)
+   - Flask (v. _ _ _)
     - pip installed
       ```
       (hero)$ pip3 install flask
