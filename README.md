@@ -43,15 +43,15 @@
    - working environment (can be named anything)
         from homedir...
 
-    ```
+   
     $ python3 -m venv hero #hero can be anything
   
-     ```
+    
     from working dir...
-    ```
+    
     $ . ~/hero/bin/activate # '.' runs the script
     
-     ```
+     
  3. Installation of Flask (through virtual environment)
    - Flask (v. _ _ _)
     - pip installed
@@ -61,10 +61,10 @@
       ```
       
     from working dir (as well) If user wants to exit the environment:
-    ```
+    
     (hero)$ deactivate
     <now you're back to normal environment>
-    ```
+   
 # Module/Library/Etc. with Special Clearance
   - Link(s) to primary documentation
   
