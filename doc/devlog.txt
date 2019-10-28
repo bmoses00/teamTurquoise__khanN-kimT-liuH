@@ -39,3 +39,7 @@ Realized that we need to allow users to edit a story
 
 henryL -- 2019-10-28 00:20
 Just realized that code only works if there is a dummy user and story.
+
+henryL -- 2019-10-28 00:50
+Not sure if we can finish in time. We still need to add to functionality
+ so that users can edit stories that they have not edited yet
