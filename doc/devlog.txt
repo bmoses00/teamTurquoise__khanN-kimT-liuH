@@ -18,6 +18,7 @@ nahiK -- 2019-10-23 14:23
 Aided Henry in the creation of the templates for signup and error. Suggested the idea of the error page.
 
 taejoonK -- Pushed my parts of the backend code on the tables to the repository. I introduced the data grouping method of tuples to PM Nahi.
+
 nahiK -- 2019-10-25 17:30
 Cloned Taejoon's part of the backend and helped with the creation of the tables. He suggested grouping data through the usage of tuples.
 
