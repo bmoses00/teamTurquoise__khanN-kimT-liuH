@@ -75,18 +75,32 @@
      <now you're back to normal environment>
       
 # Module/Library/Etc. with Special Clearance
-  - Link(s) to primary documentation
+  - Link(s) to primary documentation:
   
   https://stackoverflow.com/questions/3070384/how-to-store-a-list-in-a-column-of-a-database-table
+     - Helped with our knowledge on how to store a list in a column of a database table
+     - Was necessary due to our (collective) forgetful natures
+     - Used to help us store lists in columns of a database table(s)
+     
   https://www.dummies.com/web-design-development/site-development/how-to-put-text-boxes-in-an-html5-form/
+     - Enhanced our knowledege on how to put text boxes in a html form
+     - Was necessary as a reminder for Henry
+     - Used to aid Henry in creating text boxes in certain html forms
   https://stackoverflow.com/questions/34329852/how-to-insert-date-values-into-table
+     - Provided additional helpful information on how to insert date values into a table
+     - Aided Henry in his research
+     - Henry input values of dates into tables
   https://pynative.com/python-cursor-fetchall-fetchmany-fetchone-to-read-rows-from-table/
+     - Reminder for the group on how to fetch and read rows from a table
+     - Was necessary because group forgot how to do this collectively
+     - Used to fetch data from rows in tables
   http://openbookproject.net/thinkcs/python/english3e/tuples.html
+     - Usages of tuples and its applications
+     - Taejoon thought of this way of grouping data
+     - Used in the tables and such
   https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository
-  
-  - Succinct, clear explanation of what it does
-  - Succinct, clear explanation of why you deemed it necessary
-  - Clear, precise explanation of how it is used in your project
-  - Use appropriate formatting to denote commands, etc.
+     - Helps one to recall how to clone a repo in github
+     - Just in case a person does not know how to clone, hence the link
+     - Used to aid in the cloning process of our repo for our project
   
   © 2019 teamTurquoise, Inc. 😎😎😎
