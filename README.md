@@ -114,4 +114,4 @@
      Just in case a person does not know how to clone, hence the link
      Used to aid in the cloning process of our repo for our project
   
-  © 2019 teamTurquoise, Inc. 😈🤑🤩
+  © 2019 teamTurquoise, Inc. 😈🤑😎
