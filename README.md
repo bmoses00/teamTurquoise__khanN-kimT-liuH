@@ -58,7 +58,14 @@
       (hero)$ pip3 install flask
       <write and run Flask code...>
       ```
- 4. 
+ 4. Running the Project
+      ```
+      $ cd <name of cloned directory>
+      /<name of cloned directory>$ python3 app.py
+      ```
+      
+ 5. Visit the webpage by opening a web browser and entering:
+ http://127.0.0.1:5000/
       
  (Last Step)   
  from working dir (as well) If user wants to exit the environment:
@@ -80,3 +87,5 @@
   - Succinct, clear explanation of why you deemed it necessary
   - Clear, precise explanation of how it is used in your project
   - Use appropriate formatting to denote commands, etc.
+  
+  © 2019 teamTurquoise, Inc.
