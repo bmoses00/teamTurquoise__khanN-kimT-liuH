@@ -43,14 +43,14 @@
    - working environment (can be named anything)
         from homedir...
 
-   
-    $ python3 -m venv hero #hero can be anything
-  
+      ```
+      $ python3 -m venv hero #hero can be anything
+      ```
     
-    from working dir...
-    
-    $ . ~/hero/bin/activate # '.' runs the script
-    
+        from working dir...
+      ```  
+      $ . ~/hero/bin/activate # '.' runs the script
+      ```  
      
  3. Installation of Flask (through virtual environment)
    - pip installed
