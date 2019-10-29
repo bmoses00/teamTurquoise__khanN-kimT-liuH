@@ -74,7 +74,7 @@ def addStory(title, userID, text):
         db.close()  #close database
         return False
 
-def canADD(storyID, userID):
+def canAdd(userID, storyID):
     DB_FILE="accounts.db"
     db = sqlite3.connect(DB_FILE)
     c = db.cursor()
@@ -148,12 +148,12 @@ def almagate(userID): #the list it returns should be in order
     l = []
     oldtext = ""
     for storyID in storyIDs:
-        for row in new:
-            if storyID[0] == row[0]:
-                oldtext += row[2]
-        if (canAdd(userID, storyID) == false):
+        if (canAdd(userID, storyID) == False):
+            for row in new:
+                if storyID[0] == row[0]:
+                    oldtext += row[2]
             l.append(oldtext)
-        oldtext = ""
+            oldtext = ""
     db.commit() #save changes
     db.close()  #close database
     return l
@@ -174,7 +174,7 @@ def recent(userID): #the list it returns should be in order
         for row in new:
             if storyID[0] == row[0]:
                 oldtext = row[2]
-        if (canAdd(userID, storyID) == true):
+        if (canAdd(userID, storyID) == True):
             l.append(oldtext)
         oldtext = ""
     db.commit() #save changes
