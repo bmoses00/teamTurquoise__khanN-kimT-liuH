@@ -1,0 +1,40 @@
+{% extends "template.html" %}
+{% block title %}View{% endblock %}
+{% block body %}
+	<h1> View </h1>
+
+  <table>
+    {% for stories in story%}
+    <tr>
+      <td>{{stories[0]}}</td>
+      <td>{{stories[1]}}</td>
+    </tr>
+    {% endfor %}
+  </table>
+
+  <br>
+
+  <table>
+    {% for stories in users%}
+    <tr>
+      <td>{{stories[0]}}</td>
+      <td>{{stories[1]}}</td>
+      <td>{{stories[2]}}</td>
+    </tr>
+    {% endfor %}
+  </table>
+<br>
+
+<table>
+  {% for stories in edits%}
+  <tr>
+    <td>{{stories[0]}}</td>
+    <td>{{stories[1]}}</td>
+    <td>{{stories[2]}}</td>
+    <td>{{stories[3]}}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+
+	{% endblock %}

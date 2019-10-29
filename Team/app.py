@@ -49,6 +49,15 @@ def root():
     'login.html'
         )
 
+@app.route("/view")
+def view():
+    return render_template(
+        "view.html",
+        story = dbFunctions.getStory1(), #id and title
+        users = dbFunctions.getUSERNAMES1(), #list of contents
+        edits = dbFunctions.getSTORYEDITS1()
+        )
+
 
 #If password or usernamee is incorrect
 @app.route("/error")

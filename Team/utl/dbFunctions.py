@@ -191,3 +191,36 @@ def getStory1():
     db.commit() #save changes
     db.close()  #close database
     return new
+
+def getStory1():
+    DB_FILE="accounts.db"
+    db = sqlite3.connect(DB_FILE)
+    c = db.cursor()
+    command = "SELECT * FROM STORIES;"
+    c.execute(command)
+    new = c.fetchall()
+    db.commit() #save changes
+    db.close()  #close database
+    return new
+
+def getUSERNAMES1():
+    DB_FILE="accounts.db"
+    db = sqlite3.connect(DB_FILE)
+    c = db.cursor()
+    command = "SELECT * FROM USERNAMES"
+    c.execute(command)
+    new = c.fetchall()
+    db.commit() #save changes
+    db.close()  #close database
+    return new
+
+def getSTORYEDITS1():
+    DB_FILE="accounts.db"
+    db = sqlite3.connect(DB_FILE)
+    c = db.cursor()
+    command = "SELECT * FROM STORYEDITS;"
+    c.execute(command)
+    new = c.fetchall()
+    db.commit() #save changes
+    db.close()  #close database
+    return new
