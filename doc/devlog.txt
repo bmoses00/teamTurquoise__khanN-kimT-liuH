@@ -69,6 +69,8 @@ For each storyID in STORIES:
     if storyID matches the storyID from STORIES and userID is present in at least one
       take text and add it print into table
 
+taejoonK -- 2019-10-29 1:46
+We finished creating the editStory page. Most recent update can be found in the second table in the logged-in page. Attempted to add restrictions to users from editting stories they've already editted but failed due to our inability to incorporate the canADD function into the rest of the code. We have a general idea of using jinja conditionals in loggedin.html to determine if a user can edit or not, but couldn't materialize our ideas. 
 
 
 **LOOKING INTO ADDING TO THIS DOC LATER, NOT FINISHED, NEED ENTRIES FOR EACH DAY, WHETHER IT BE SUBSTANTIAL WORK OR NOT**
