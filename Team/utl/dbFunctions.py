@@ -111,6 +111,18 @@ def getStory(title):
     db.close()  #close database
     return new
 
+def getUserID(username):
+    DB_FILE="accounts.db"
+    db = sqlite3.connect(DB_FILE)
+    c = db.cursor()
+    command = "SELECT * FROM USERNAMES;"
+    c.execute(command)
+    new = c.fetchall()
+    for row in new:
+        if row[1] == username:
+            return row[0]
+
+
 def almagate(userID): #the list it returns should be in order
     DB_FILE="accounts.db"
     db = sqlite3.connect(DB_FILE)

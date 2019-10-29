@@ -97,7 +97,7 @@ def createStory():
         text = request.args["text"]
         if (dbFunctions.addStory(title, userID, text)):
             dbFunctions.addStory(title, userID, text)
-            return redirect(url_for("success"))
+            return redirect(url_for("success(userID)"))
         else:
             reason = "ERROR, Enter a different title"
             flash(reason)
@@ -113,19 +113,19 @@ def addToStory():
         userID = request.args["userID"]
         text = request.args["text"]
         if (dbFunctions.addToStory(storyID, userID, text)):
-            return redirect(url_for("success"))
+            return redirect(url_for("success(userID)"))
         else:
             reason = "ERROR"
             flash(reason)
     return render_template('addToStory.html')
 
 @app.route("/loggedIn")
-def success():
+def success(userID):
     return render_template(
         "loggedIn.html",
         storylist = dbFunctions.getStory1(), #id and title
-        editlist = dbFunctions.almagate(), #list of contents
-        recentlist = dbFunctions.recent()
+        editlist = dbFunctions.almagate(userID), #list of contents
+        recentlist = dbFunctions.recent(userID)
         )
 
 
