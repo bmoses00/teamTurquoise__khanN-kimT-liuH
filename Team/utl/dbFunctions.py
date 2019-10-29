@@ -111,7 +111,7 @@ def getStory(title):
     db.close()  #close database
     return new
 
-def almagate(): #should be in order
+def almagate(): #the list it returns should be in order
     DB_FILE="accounts.db"
     db = sqlite3.connect(DB_FILE)
     c = db.cursor()
@@ -121,15 +121,15 @@ def almagate(): #should be in order
     command = "SELECT storyID FROM STORIES;"
     c.execute(command)
     storyIDs = c.fetchall()
-    l = ["HIZ","HIZ"]
+    l = ["HIZ"]
     oldtext = ""
     for storyID in storyIDs:
         print (storyID)
         for row in new:
             print (row)
-            if storyID == row[0]:
+            if storyID[0] == row[0]:
                 oldtext += row[2]
-        l[storyID[0]] = oldtext
+        l.append(oldtext)
         oldtext = ""
     db.commit() #save changes
     db.close()  #close database
