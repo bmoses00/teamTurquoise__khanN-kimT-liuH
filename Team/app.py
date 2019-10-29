@@ -63,10 +63,10 @@ def view():
 @app.route("/error")
 def try_again():
     global reason
-    userID = dbFunctions.getUserID(username)
     if ("username" in request.args) & ("password" in request.args):
             username = request.args["username"]
             password = request.args["password"]
+            userID = dbFunctions.getUserID(username)
             #If password and usernamee are correct
             if (dbFunctions.accountExists(username,password) > -1):
                 return success(userID)
