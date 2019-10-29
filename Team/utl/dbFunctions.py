@@ -78,17 +78,11 @@ def canAdd(userID, storyID):
     DB_FILE="accounts.db"
     db = sqlite3.connect(DB_FILE)
     c = db.cursor()
-    command = "SELECT storyID, userID FROM STORYEDITS;"
-    c.execute(command)
-    ids = c.fetchall()
-    for row in ids:
-        if storyID == row[0] and userID == row[1]:
-            db.commit() #save changes
-            db.close()  #close database
-            return False
+    c.execute('SELECT * FROM STORYEDITS WHERE userID = ? AND storyID = ?', (userID, storyID))
+    boss = c.fetchone()
     db.commit() #save changes
     db.close()  #close database
-    return True
+    return boss == None
 
 def addToStory(storyID, userID, text):
     DB_FILE="accounts.db"
@@ -97,19 +91,21 @@ def addToStory(storyID, userID, text):
     command = "SELECT storyID, storyID FROM STORIES WHERE storyID = \"{}\";".format(storyID)
     c.execute(command)
     new = c.fetchall()
-    if len(new) == 1:
-        command = "SELECT storyID FROM STORYEDITS;"
-        c.execute(command)
-        q = c.fetchall()
-        command = "INSERT INTO STORYEDITS VALUES(\"{}\",\"{}\",\"{}\");".format(storyID,userID,text)
-        c.execute(command)
-        db.commit() #save changes
-        db.close()  #close database
-        return True
+    if (canAdd(userID, storyID) == True):
+        if len(new) == 1:
+            command = "SELECT storyID FROM STORYEDITS;"
+            c.execute(command)
+            q = c.fetchall()
+            command = "INSERT INTO STORYEDITS VALUES(\"{}\",\"{}\",\"{}\");".format(storyID,userID,text)
+            c.execute(command)
+            db.commit() #save changes
+            db.close()  #close database
+            return True
     else:
         db.commit() #save changes
         db.close()  #close database
         return False
+
 
 
 def getStory(title):

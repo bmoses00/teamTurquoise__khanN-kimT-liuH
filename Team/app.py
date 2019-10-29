@@ -40,7 +40,7 @@ def root():
         #If password and usernamee are correct
         if (dbFunctions.accountExists(username,password) > -1):
             #return redirect(url_for("success(userID)"))
-            return success(userID)
+            return success()
         #If credentials incorrect
         else:
             reason = "Invalid credentials"
@@ -127,7 +127,7 @@ def addToStory():
         if (dbFunctions.addToStory(storyID, userID, text)):
             return success()
         else:
-            reason = "ERROR"
+            reason = "ERROR, added to story already"
             flash(reason)
     return render_template('addToStory.html')
 
