@@ -16,12 +16,14 @@
 	<input type="submit" name="sub1">
 
 	<table>
+		<th>storylist</th>
 		{% for stories in storylist%}
 		<tr>
 			<td>{{stories[0]}}</td>
 			<td>{{stories[1]}}</td>
 		</tr>
 		{% endfor %}
+		<th>editlist</th>
 		{% for text in editlist%}
 		<tr>
 			<td>{{text}}</td>

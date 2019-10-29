@@ -121,7 +121,7 @@ def almagate(): #the list it returns should be in order
     command = "SELECT storyID FROM STORIES;"
     c.execute(command)
     storyIDs = c.fetchall()
-    l = ["HIZ"]
+    l = []
     oldtext = ""
     for storyID in storyIDs:
         print (storyID)
