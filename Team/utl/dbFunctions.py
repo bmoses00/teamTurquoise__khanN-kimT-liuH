@@ -83,7 +83,11 @@ def canAdd(userID, storyID):
     ids = c.fetchall()
     for row in ids:
         if storyID == row[0] and userID == row[1]:
+            db.commit() #save changes
+            db.close()  #close database
             return False
+    db.commit() #save changes
+    db.close()  #close database
     return True
 
 def addToStory(storyID, userID, text):
@@ -132,7 +136,11 @@ def getUserID(username):
     new = c.fetchall()
     for row in new:
         if row[1] == username:
+            db.commit() #save changes
+            db.close()  #close database
             return row[0]
+    db.commit() #save changes
+    db.close()  #close database
 
 
 def almagate(userID): #the list it returns should be in order
@@ -148,10 +156,10 @@ def almagate(userID): #the list it returns should be in order
     l = []
     oldtext = ""
     for storyID in storyIDs:
-        if (canAdd(userID, storyID) == False):
+        if (canAdd(userID, storyID) == True):
             for row in new:
                 if storyID[0] == row[0]:
-                    oldtext += row[2]
+                    oldtext += row[2] + " "
             l.append(oldtext)
             oldtext = ""
     db.commit() #save changes
@@ -192,16 +200,6 @@ def getStory1():
     db.close()  #close database
     return new
 
-def getStory1():
-    DB_FILE="accounts.db"
-    db = sqlite3.connect(DB_FILE)
-    c = db.cursor()
-    command = "SELECT * FROM STORIES;"
-    c.execute(command)
-    new = c.fetchall()
-    db.commit() #save changes
-    db.close()  #close database
-    return new
 
 def getUSERNAMES1():
     DB_FILE="accounts.db"

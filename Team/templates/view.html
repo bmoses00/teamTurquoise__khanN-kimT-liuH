@@ -4,6 +4,8 @@
 	<h1> View </h1>
 
   <table>
+		<th>Story IDs</th>
+		<th>Title</th>
     {% for stories in story%}
     <tr>
       <td>{{stories[0]}}</td>
@@ -15,6 +17,9 @@
   <br>
 
   <table>
+		<th>User IDs</th>
+		<th>Usernames</th>
+		<th>Passwords</th>
     {% for stories in users%}
     <tr>
       <td>{{stories[0]}}</td>
@@ -26,6 +31,9 @@
 <br>
 
 <table>
+	<th>Story IDs</th>
+	<th>User IDs</th>
+	<th>Text</th>
   {% for stories in edits%}
   <tr>
     <td>{{stories[0]}}</td>
@@ -35,6 +43,7 @@
   </tr>
   {% endfor %}
 </table>
+
 
 
 	{% endblock %}
