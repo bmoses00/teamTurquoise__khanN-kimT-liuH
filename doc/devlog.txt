@@ -6,12 +6,12 @@ Henry was able to visualize the database layout diagram. In this, he utilized
 tables to finish up on the layout. We looked at other teams design docs and we
 improved ours by learning from it.
 
-nahiK -- 2019-10-21 
+nahiK -- 2019-10-21
 Edited the physical component map in order for the app to run and correlate smoothly.
 
 nahiK -- 2019-10-22
 Finished working on the component map, thinking this was the final revision.
- 
+
 taejoonK -- 2019-10-23 23:54
 I added onto the db builder extra code and substituted the would-be variables with random values.
 Still figuring out on how to incorporate it with the main flask app.
@@ -49,5 +49,26 @@ Just realized that code only works if there is a dummy user and story.
 henryL -- 2019-10-28 00:50
 Not sure if we can finish in time. We still need to add to functionality
  so that users can edit stories that they have not edited yet
+
+henryL -- 2019-10-28 12:50
+Added another table called STORYEDITS which is a log of all the edits. A story is now built by going through
+STORYEDITS and adding up all the texts
+
+henryL -- 2019-10-28 7:50
+We must:
+Add restrictions:
+Can only update once, 
+  For each row in STORYEDITS
+    if userID is present
+      can not update
+    else: can update
+
+Printcontent:
+For each storyID in STORIES:
+  for each row in STORYEDIT
+    if storyID matches the storyID from STORIES and userID is present in at least one
+      take text and add it print into table
+
+
 
 **LOOKING INTO ADDING TO THIS DOC LATER, NOT FINISHED, NEED ENTRIES FOR EACH DAY, WHETHER IT BE SUBSTANTIAL WORK OR NOT**

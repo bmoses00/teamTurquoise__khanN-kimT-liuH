@@ -182,7 +182,8 @@ def recent(userID): #the list it returns should be in order
         for row in new:
             if storyID[0] == row[0]:
                 oldtext = row[2]
-        if (canAdd(userID, storyID) == True):
+        #if (canAdd(userID, storyID) == True):
+        if (True == True):
             l.append(oldtext)
         oldtext = ""
     db.commit() #save changes
