@@ -31,14 +31,16 @@ reason = ""
 def root():
     #global is a keyword that allows an user to modify a variable outside the current scope
     global reason
-    print(url_for("success"))
+    #print(url_for("success"))
     #Check to see if user entered usernamee and password
     if ("username" in request.args) & ("password" in request.args):
         username = request.args["username"]
         password = request.args["password"]
+        userID = dbFunctions.getUserID(username)
         #If password and usernamee are correct
         if (dbFunctions.accountExists(username,password) > -1):
-            return redirect(url_for("success"))
+            #return redirect(url_for("success(userID)"))
+            return success(userID)
         #If credentials incorrect
         else:
             reason = "Invalid credentials"
@@ -52,12 +54,13 @@ def root():
 @app.route("/error")
 def try_again():
     global reason
+    userID = dbFunctions.getUserID(username)
     if ("username" in request.args) & ("password" in request.args):
             username = request.args["username"]
             password = request.args["password"]
             #If password and usernamee are correct
             if (dbFunctions.accountExists(username,password) > -1):
-                return redirect(url_for("success"))
+                return redirect(url_for("success(userID)"))
             #If credentials incorrect
             else:
                 reason = "Invalid credentials"
@@ -97,7 +100,7 @@ def createStory():
         text = request.args["text"]
         if (dbFunctions.addStory(title, userID, text)):
             dbFunctions.addStory(title, userID, text)
-            return redirect(url_for("success"))
+            return redirect(url_for("success(userID)"))
         else:
             reason = "ERROR, Enter a different title"
             flash(reason)
@@ -113,18 +116,19 @@ def addToStory():
         userID = request.args["userID"]
         text = request.args["text"]
         if (dbFunctions.addToStory(storyID, userID, text)):
-            return redirect(url_for("success"))
+            return redirect(url_for("success(userID)"))
         else:
             reason = "ERROR"
             flash(reason)
     return render_template('addToStory.html')
 
 @app.route("/loggedIn")
-def success():
+def success(userID):
     return render_template(
         "loggedIn.html",
-        storylist = dbFunctions.getStory1(),
-        editlist = dbFunctions.almagate()
+        storylist = dbFunctions.getStory1(), #id and title
+        editlist = dbFunctions.almagate(userID), #list of contents
+        recentlist = dbFunctions.recent(userID)
         )
 
 
