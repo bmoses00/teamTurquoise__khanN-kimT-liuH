@@ -69,7 +69,7 @@ def try_again():
             userID = dbFunctions.getUserID(username)
             #If password and usernamee are correct
             if (dbFunctions.accountExists(username,password) > -1):
-                return success(userID)
+                return success()
             #If credentials incorrect
             else:
                 reason = "Invalid credentials"
@@ -109,7 +109,7 @@ def createStory():
         text = request.args["text"]
         if (dbFunctions.addStory(title, userID, text)):
             dbFunctions.addStory(title, userID, text)
-            return success(userID)
+            return success()
         else:
             reason = "ERROR, Enter a different title"
             flash(reason)
@@ -125,19 +125,19 @@ def addToStory():
         userID = request.args["userID"]
         text = request.args["text"]
         if (dbFunctions.addToStory(storyID, userID, text)):
-            return success(userID)
+            return success()
         else:
             reason = "ERROR"
             flash(reason)
     return render_template('addToStory.html')
 
 @app.route("/loggedIn")
-def success(userID):
+def success():
     return render_template(
         "loggedIn.html",
         storylist = dbFunctions.getStory1(), #id and title
-        editlist = dbFunctions.almagate(userID), #list of contents
-        editlistrecent = dbFunctions.recent(userID)
+        editlist = dbFunctions.almagate(), #list of contents
+        editlistrecent = dbFunctions.recent()
         )
 
 

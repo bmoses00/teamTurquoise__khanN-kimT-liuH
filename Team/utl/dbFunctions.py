@@ -143,7 +143,7 @@ def getUserID(username):
     db.close()  #close database
 
 
-def almagate(userID): #the list it returns should be in order
+def almagate(): #the list it returns should be in order
     DB_FILE="accounts.db"
     db = sqlite3.connect(DB_FILE)
     c = db.cursor()
@@ -156,7 +156,7 @@ def almagate(userID): #the list it returns should be in order
     l = []
     oldtext = ""
     for storyID in storyIDs:
-        if (canAdd(userID, storyID) == True):
+        if (True == True):
             for row in new:
                 if storyID[0] == row[0]:
                     oldtext += row[2] + " "
@@ -166,7 +166,7 @@ def almagate(userID): #the list it returns should be in order
     db.close()  #close database
     return l
 
-def recent(userID): #the list it returns should be in order
+def recent(): #the list it returns should be in order
     DB_FILE="accounts.db"
     db = sqlite3.connect(DB_FILE)
     c = db.cursor()
@@ -182,7 +182,7 @@ def recent(userID): #the list it returns should be in order
         for row in new:
             if storyID[0] == row[0]:
                 oldtext = row[2]
-        if (canAdd(userID, storyID) == True):
+        if (True == True):
             l.append(oldtext)
         oldtext = ""
     db.commit() #save changes
