@@ -123,8 +123,9 @@ def addToStory():
 def success():
     return render_template(
         "loggedIn.html",
-        storylist = dbFunctions.getStory1(),
-        editlist = dbFunctions.almagate()
+        storylist = dbFunctions.getStory1(), #id and title
+        editlist = dbFunctions.almagate(), #list of contents
+        recentlist = dbFunctions.recent()
         )
 
 

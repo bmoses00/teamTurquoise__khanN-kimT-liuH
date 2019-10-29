@@ -14,13 +14,32 @@
 	Search: <input type="text" name="search">
 	<br>
 	<input type="submit" name="sub1">
-
+	<br>
+	<th><b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspEdited Stories</b></th>
 	<table>
+		<td><b>storyID</b></td>
+		<td><b>Story title</b></td>
+		<td><b>Content</b></td>
 		{% for stories in storylist%}
 		<tr>
 			<td>{{stories[0]}}</td>
 			<td>{{stories[1]}}</td>
 			<td>{{editlist[stories[0]]}}</td>
+		</tr>
+		{% endfor %}
+	</table>
+  <br>
+	<br>
+	<th><b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspUnedited Stories</b></th>
+	<table>
+		<td><b>storyID</b></td>
+		<td><b>Story title</b></td>
+		<td><b>Most recent added</b></td>
+		{% for stories in storylist%}
+		<tr>
+			<td>{{stories[0]}}</td>
+			<td>{{stories[1]}}</td>
+			<td>{{editlistrecent[stories[0]]}}</td>
 			<td><a href="http://127.0.0.1:5000/addToStory ">Add to Story</a></td>
 		</tr>
 		{% endfor %}
