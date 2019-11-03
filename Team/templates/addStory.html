@@ -1,6 +1,7 @@
 {% extends "template.html" %}
 {% block title %}Create Story{% endblock %}
 {% block body %}
+<div>
 	<h1> Create Story </h1>
 
   {% for message in get_flashed_messages() %}
@@ -13,16 +14,18 @@
 	  <br>
 		userID:
 	  <input type="text" name="userID">
-	  <br>
+	  <br> <br>
     <label for="content">Content:</label>
     <br>
     <textarea rows="15" cols="90" name="text"
         placeholder="Enter story content here"
         required></textarea>
 
-    <br>
+    <br> <br>
 
-    <input type="submit" name="sub1">
+    <input id = "button" type="submit" name="sub1">
     </form>
-		<a href="http://127.0.0.1:5000/loggedIn ">Go back</a></td>
+		<br>
+		<a id = "button" href="http://127.0.0.1:5000/loggedIn ">Go back</a></td>
+		</div>
 	{% endblock %}

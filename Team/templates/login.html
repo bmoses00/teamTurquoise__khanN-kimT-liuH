@@ -1,6 +1,7 @@
 {% extends "template.html" %}
 {% block title %}Login{% endblock %}
 {% block body %}
+<div>
 <h1> Log in </h1>
 
 {% for message in get_flashed_messages() %}
@@ -11,13 +12,14 @@
 
 	  Username:
 	  <input type="text" name="username">
-	  <br>
+	  <br> <br>
 	  Password:
 	  <input type="text" name="password">
-	  <br>
-	  <input type="submit" name="sub1">
-<br>
-<a href="http://127.0.0.1:5000/signup">Signup</a>
+	  <br> <br>
+	  <input id = "button" type="submit" name="sub1">
+    <br> <br>
+    <a id = "button" href="http://127.0.0.1:5000/signup">Signup</a>
 
 	</form>
+  </div>
 	{% endblock %}

@@ -1,24 +1,20 @@
 {% extends "template.html" %}
 {% block title %}Home Page{% endblock %}
+
 {% block body %}
-	<h1> Home Page</h1>
-	<form action="/">
-		<button type="submit"> Logout</button>
-	</form>
-	<a href="http://127.0.0.1:5000/addStory">Create Story</a>
-
-
+<form id = "logout" action="/">
+	<button id = "button" type="submit"> Logout</button>
+</form>
+	<br> <br>
 	<h2> Welcome</h2>
-
-	<form action="/view">
-		<button type="submit"> Check</button>
-	</form>
+	<br>
 	<form action = "/loggedIn">
-	Search: <input type="text" name="search">
-	<br>
-	<input type="submit" name="sub1">
-	<br>
+	Search for a story: <input type="text" name="search">
+	<br> <br>
+	<input id = "button" type="submit" name="sub1">
+	<br> <br> <br> <br>
 	<th><b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspEdited Stories</b></th>
+	<br> <br>
 	<table>
 		<td><b>storyID</b></td>
 		<td><b>Story title</b></td>
@@ -34,6 +30,7 @@
   <br>
 	<br>
 	<th><b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspUnedited Stories</b></th>
+	<br> <br>
 	<table>
 		<td><b>storyID</b></td>
 		<td><b>Story title</b></td>
@@ -43,9 +40,15 @@
 			<td>{{stories[0]}}</td>
 			<td>{{stories[1]}}</td>
 			<td>{{editlistrecent[stories[0]]}}</td>
-			<td><a href="http://127.0.0.1:5000/addToStory ">Add to Story</a></td>
+			<td><a id = "button" href="http://127.0.0.1:5000/addToStory ">Add to Story</a></td>
 		</tr>
 		{% endfor %}
 	</table>
   </form>
+	<br>
+	<form action="/view">
+		<button id = "button" type="submit"> View All Stories</button>
+	</form>
+	<br>
+	<a id = "button" href="http://127.0.0.1:5000/addStory">Create Story</a>
 {% endblock %}
