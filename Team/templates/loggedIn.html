@@ -5,6 +5,7 @@
 <form id = "logout" action="/">
 	<button id = "button" type="submit"> Logout</button>
 </form>
+<div>
 	<br> <br>
 	<h2> Welcome</h2>
 	<br>
@@ -12,10 +13,11 @@
 	Search for a story: <input type="text" name="search">
 	<br> <br>
 	<input id = "button" type="submit" name="sub1">
+</div>
 	<br> <br> <br> <br>
-	<th><b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspEdited Stories</b></th>
+	<div id = "table"><h3>Edited Stories</h3>
 	<br> <br>
-	<table>
+	<table align = "center">
 		<td><b>storyID</b></td>
 		<td><b>Story title</b></td>
 		<td><b>Content</b></td>
@@ -27,11 +29,13 @@
 		</tr>
 		{% endfor %}
 	</table>
+</div>
+	<hr>
   <br>
 	<br>
-	<th><b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspUnedited Stories</b></th>
+	<div id = "table"><h3>Unedited Stories</h3>
 	<br> <br>
-	<table>
+	<table align = "center">
 		<td><b>storyID</b></td>
 		<td><b>Story title</b></td>
 		<td><b>Most recent added</b></td>
@@ -39,11 +43,12 @@
 		<tr>
 			<td>{{stories[0]}}</td>
 			<td>{{stories[1]}}</td>
-			<td>{{editlistrecent[stories[0]]}}</td>
+			<td>{{editlistrecent[stories[0]]}}</td> 
 			<td><a id = "button" href="http://127.0.0.1:5000/addToStory ">Add to Story</a></td>
 		</tr>
 		{% endfor %}
 	</table>
+	</div>
   </form>
 	<br>
 	<form action="/view">
