@@ -1,0 +1,37 @@
+/* div { */
+  /* text-align: center; */
+/* } */
+
+#button {
+  /* shamelessly copied from bestcssbuttongenerator.com */
+
+
+  /* text formatting */
+  font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	text-decoration:none;
+  color:#666666;
+
+  /* coloring of button */
+  box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+	background-color:#ffffff;
+  text-shadow:0px 1px 0px #ffffff;
+
+  /* boundaries of button */
+  border:1px solid #dcdcdc;
+	border-radius:6px;
+  padding:6px 24px;
+
+  display: inline-block;
+	cursor:pointer; /* changes cursor when you mouse over button */
+}
+
+#logout {
+  float: right;
+}
+
+body {
+  background-color: #D3D3D3;
+}
